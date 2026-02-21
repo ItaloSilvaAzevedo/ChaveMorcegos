@@ -1,0 +1,203 @@
+/* ============================================
+   CHAVE DICOTÔMICA - ESTILOS GLOBAIS
+   ============================================ */
+
+/* ============================================
+   VARIÁVEIS CSS - TEMAS CLARO/ESCURO
+   ============================================ */
+
+/* RESET BÁSICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+body { 
+  font-family: Arial, sans-serif; 
+  margin: 5px; 
+  padding: 5px; 
+  transition: background-color 0.3s, color 0.3s;
+  height: 100vh; /* Ocupa toda a altura da tela */ 
+  display: grid; 
+  place-items: center; /* Centraliza horizontal e vertical */
+}
+
+
+/* Tema claro */
+body.light {
+  background-color: #ffffff; 
+  color: #000000;
+}
+
+/* Tema escuro */ 
+body.dark { 
+  background-color: #121212; 
+  color: #f0f0f0;
+}
+
+
+header {
+  padding: 1rem; 
+  text-align: center;
+  display: flex; 
+  justify-content: center; /* Centraliza horizontalmente */ 
+  align-items: center; /* Centraliza verticalmente */
+ 
+} 
+
+h1 { 
+  margin: 0; 
+} 
+
+/* Botão redondo minimalista */ 
+#menuBtn { 
+  width: 40px; 
+  height: 40px; 
+  border-radius: 50%; 
+  border: none; 
+  background-color: #333; 
+  color: #fff; 
+  font-size: 1.2rem; 
+  cursor: pointer; 
+  transition: background-color 0.3s; 
+  display: flex;
+  align-items: center; 
+  justify-content: center; 
+} 
+
+#menuBtn:hover { 
+  background-color: #555; 
+}
+
+/* Estilo do botão Iniciar */ 
+#startBtn { 
+  display: inline-flex;
+  align-items: center; 
+  gap: 0.5rem; 
+  margin: 20px ;
+  padding: 10px 20px; /* Valor final */
+  font-size: 18px;    
+  font-weight: bold; 
+  border: none; 
+  border-radius: 8px; 
+  cursor: pointer;
+  background-color: #333; 
+  color: #fff;
+  transition: background-color 0.3s, transform 0.2s;
+  position: relative;
+  left: 42%;
+  transform: translateX(-10%); /* Adicionado para centralizar de verdade */ 
+} 
+
+#startBtn:hover { 
+  background-color: #555; 
+  transform: scale(1.05); 
+} 
+
+#startBtn span.icon { 
+  font-size: 1.2rem;
+}
+
+/* Estilos para as perguntas e opções */
+
+.question {
+  display: none;
+  /* escondida até o start */
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.options {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.options button {
+  padding: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+
+.resultfamilia {
+  display: none;
+  /* Escondida até ser mostrada */
+  text-align: center;
+  padding: 20px 20px;
+  margin-top: 20px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  background-color: aqua;
+  color: #333;
+}
+
+#menufamilia .options { 
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); /* 3 colunas iguais */ 
+  gap: 10px; /* espaço entre os botões */ 
+} 
+
+#menufamilia .options button { 
+  padding: 10px; 
+  font-size: 16px; 
+  cursor: pointer;
+} 
+
+#menufamilia .options button[data-answer="reset"] {
+  grid-column: 1 / -1; /* ocupa da primeira até a última coluna */ 
+  font-size: 18px; 
+  padding: 10px; 
+}
+
+.result { 
+  display: none; 
+  text-align: justify; 
+  padding: 20px; 
+  margin-top: 20px; 
+  border: 2px solid #333; 
+  border-radius: 8px; 
+  background-color:aqua; 
+  color: #333;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+footer { 
+  padding: 1rem; 
+  text-align: center; 
+  background-color: #373839; 
+  color: white;
+}

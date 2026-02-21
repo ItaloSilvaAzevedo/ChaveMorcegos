@@ -1,0 +1,465 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+  <meta name="description" content="Chave Dicotômica Interativa para Identificação de Morcegos Neotropicais" />
+  <title>Chave Dicotômica: Morcegos Neotropicales</title>
+  
+  <!-- Importação do CSS -->
+   <link rel="stylesheet" href="style.css" />
+<head>
+
+<body>
+
+<header id="cabecalho">
+  <h1>Chave Dicotômica Interativa para Identificação de Morcegos Neotropicais</h1>
+  <button id="menuBtn">🌙</button> </header>
+</header>
+
+  <!-- Seção de introdução -->
+<section id="boasvindas"class="intro">
+  
+  <p>Bem-vindo à nossa chave dicotômica interativa para identificação de morcegos neotropicais! Esta ferramenta foi desenvolvida para ajudar pesquisadores, estudantes e entusiastas a identificar espécies de morcegos com base em características morfológicas. A chave é fácil de usar e guiá-lo-á passo a passo através de uma série de perguntas, levando-o à identificação correta da espécie. Clique no botão abaixo para iniciar!
+  </p>
+
+  <div>
+    <button id= "startBtn">
+      <span class="icon">🦇</span>
+      <span>Iniciar</span>
+    </button>
+  </div>
+</section>
+
+<!-- inicio da chave  -->
+
+<section id="secao-chave" class="app">
+  <div class="question" id="q1">
+    <h2>O que você sabe sobre a espécie?</h2>
+    <div class="options">
+    <button data-answer="chave-familia">Não sei nada</button>
+    <button data-answer="menufamilia">Sei a família</button>
+    <button data-answer="genero">Sei o gênero</button>
+    </div> 
+  </div>
+  
+  <!-- Chave para a FAMILIA -->
+
+  <div class="question" id="chave-familia">
+    <h2>Então identificaremos a família</h2>
+    <div class="options">
+    <button data-answer="Phylostomidae">Presença de uma estrutura nasal em forma de lança ou folha.</button>
+    <button data-answer="q2">Sem folha nasal</button>
+    <button data-answer="reset">Reiniciar</button>
+    </div> 
+  </div>
+
+  <div class="question" id="q2">
+    <h2>Observe o polegar e os pés</h2>
+    <div class="options">
+    <button data-answer="Thyropteridae">Presença de discos adesivos (ventosas) na base dos polegares e/ou na sola dos pés traseiro</button>
+    <button data-answer="q3">Sem discos ou ventosas</button>
+    <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+  
+  <div class="question" id="q3">
+    <h2>Como é a cauda?</h2>
+    <div class="options">
+    <button data-answer="q4">A cauda perfura o uropatagio e sai do lado dorsal</button>
+    <button data-answer="q6">A cauda é larga completamente incluída no uropatagio, ou com uma pequena porção livre na extremidade distal</button>
+    <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="q4">
+    <h2>Observe o rosto, as asas e os labios</h2>
+    <div class="options">
+    <button data-answer="Emballonuridae">Rosto praticamente nu; muitas espécies com sacos no propatágio ou uropatágio; um par de verrugas em forma de V no lábio inferior; falanges do terceiro dedo curvadas primeiro para fora e depois para dentro.</button>
+    <button data-answer="q5">Rosto com pelos; sem bolsas nas membranas; lábio inferior com pregas irregulares ou placa com numerosas verrugas pequenas ou com três pequenas pregas semilunares; falanges do terceiro dedo curvadas para dentro</button>
+    <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="q5">
+    <h2>Observe os labios</h2>
+    <div class="options">
+    <button data-answer="Noctilionidae">Aparência de "Buldogue" com Lábios superiores grossos e cheios, divididos por uma dobra de pele, e bochechas com bolsas. Patas traseiras enormes com garras longas, curvadas e afiadas (em formato de gancho) </button>
+    <button data-answer="Mormoopidae">Lábio superior inteiro, sem aparencia leporinica; lábio inferior com pregas irregulares ou placa com numerosas verrugas pequenas; patas com garras não alongadas.</button>
+    <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+  
+  <div class="question" id="q6">
+    <h2>Observe o polegar</h2>
+    <div class="options">
+    <button data-answer="Furipteridae">Polegar curto e coberto pelo propatágio, exceto por uma pequena garra.</button>
+    <button data-answer="q7">Polegar desenvolvido e livre do propatágio</button>
+    <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="q7">
+    <h2>Observe a orelha</h2>
+    <div class="options">
+    <button data-answer="Natalidae">Presença de orelhas grandes e em forma de funil, combinada com um órgão glandular único na testa dos machos, chamado de órgão natalídeo. Comprimento da tíbia maior que a metade do comprimento do antebraço.</button>
+    <button data-answer="q8">Sem orelhas grandes e em forma de funil, sem órgão natalídeo; comprimento da tíbia menor que a metade do comprimento do antebraço.</button>
+    <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="q8">
+    <h2>Observe a cauda e o uropatagio</h2>
+    <div class="options">
+    <button data-answer="Molossidae">Cauda com uma porção significativa livre do uropatágio; orelha sem lóbulo basal; trago muito pequeno. </button>
+    <button data-answer="Vespertilionidae">Cauda completamente, ou quase completamente, envolvida pelo uropatágio; Orelha com lóbulo basal; trago bem desenvolvido e longo.</button>
+    <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <!-- Resultados para a chave da FAMILIA -->
+
+  <div class="resultfamilia" id="Phylostomidae">
+    <h2>Família: Phyllostomidae</h2>
+    <p>Características: Presença de uma estrutura nasal em forma de lança ou folha (noseleaf). Esta família é a mais diversa de morcegos neotropicais, com uma ampla variedade de formas e hábitos alimentares, incluindo frugívoros, nectarívoros, insetívoros e hematófagos.</p>
+    <div class="options">
+      <button data-answer="chavePhylostomidae"> Continuar na chave para Phylostomidae</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="resultfamilia" id="Thyropteridae">
+    <h2>Família: Thyropteridae</h2>
+    <p>Características: Presença de discos adesivos funcionais (ventosas) na base dos polegares e/ou na sola dos pés traseiro. Esta família é composta por morcegos de pequeno porte, geralmente com hábitos insetívoros. São encontrados em florestas tropicais, onde se aderem a superfícies lisas, como folhas ou troncos, usando suas ventosas.</p>
+    <div class="options">
+      <button data-answer="chaveThyropteridae"> Continuar na chave para Thyropteridae</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="resultfamilia" id="Emballonuridae">
+    <h2>Família: Emballonuridae</h2>
+    <p>Características: Presença de uma bolsa glandular na membrana alar (asa). Esta família é composta por morcegos de pequeno a médio porte, geralmente com hábitos insetívoros. São encontrados em uma variedade de habitats, incluindo florestas tropicais e áreas urbanas.</p>
+    <div class="options">
+      <button data-answer="chaveEmballonuridae"> Continuar na chave para Emballonuridae</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="resultfamilia" id="Noctilionidae">
+    <h2>Família: Noctilionidae</h2>
+    <p>Características: Aparência de "Buldogue" com Lábios superiores grossos e cheios, divididos por uma dobra de pele, e bochechas com bolsas. Patas traseiras enormes com garras longas, curvadas e afiadas (em formato de gancho). Esta família é composta por morcegos de médio a grande porte, geralmente com hábitos piscívoros. São encontrados em áreas próximas a corpos d'água, onde se alimentam de peixes e outros organismos aquáticos.</p>
+    <div class="options">
+      <button data-answer="chaveNoctilionidae"> Continuar na chave para Noctilionidae</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="resultfamilia" id="Mormoopidae">
+    <h2>Família: Mormoopidae</h2>
+    <p>Características: lábio inferior com pregas irregulares ou placa com numerosas verrugas pequenas; patas com garras não alongadas. Esta família é composta por morcegos de pequeno a médio porte, geralmente com hábitos insetívoros. São encontrados em uma variedade de habitats, incluindo florestas tropicais e áreas urbanas.</p>
+    <div class="options">
+      <button data-answer="chaveMormoopidae"> Continuar na chave para Mormoopidae</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="resultfamilia" id="Furipteridae">
+    <h2>Família: Furipteridae</h2>
+    <p>Características: Polegar curto e coberto pelo propatágio, exceto por uma pequena garra. Esta família é composta por morcegos de pequeno porte, geralmente com hábitos insetívoros. São encontrados em florestas tropicais, onde se alimentam de insetos e outros pequenos invertebrados.</p>
+    <div class="options">
+      <button data-answer="chaveFuripteridae"> Continuar na chave para Furipteridae</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div> 
+  
+  <div class="resultfamilia" id="Natalidae">
+    <h2>Família: Natalidae</h2>
+    <p>Características: Presença de orelhas grandes e em forma de funil, combinada com um órgão glandular único na testa dos machos, chamado de órgão natalídeo. Comprimento da tíbia maior que a metade do comprimento do antebraço. Esta família é composta por morcegos de pequeno porte, geralmente com hábitos insetívoros. São encontrados em florestas tropicais, onde se alimentam de insetos e outros pequenos invertebrados.</p>
+    <div class="options">
+      <button data-answer="chaveNatalidae"> Continuar na chave para Natalidae</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="resultfamilia" id="Molossidae">
+    <h2>Família: Molossidae</h2>
+    <p>Características: Cauda com uma porção significativa livre do uropatágio; orelha sem lóbulo basal; trago muito pequeno. Esta família é composta por morcegos de médio a grande porte, geralmente com hábitos insetívoros. São encontrados em uma variedade de habitats, incluindo florestas tropicais e áreas urbanas.</p>
+    <div class="options">
+      <button data-answer="chaveMolossidae"> Continuar na chave para Molossidae</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="resultfamilia" id="Vespertilionidae">
+    <h2>Família: Vespertilionidae</h2>
+    <p>Características: Cauda completamente, ou quase completamente, envolvida pelo uropatágio; Orelha com lóbulo basal; trago bem desenvolvido e longo. Esta família é composta por morcegos de pequeno a médio porte, geralmente com hábitos insetívoros. São encontrados em uma variedade de habitats, incluindo florestas tropicais e áreas urbanas.</p>
+    <div class="options">
+      <button data-answer="chaveVespertilionidae"> Continuar na chave para Vespertilionidae</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <!-- Qual a familia? -->
+
+  <div class="question" id="menufamilia">
+    <h2>Qual a família?</h2>
+    <div class="options">
+    <button data-answer="chavePhylostomidae"> Phylostomidae</button>
+      <button data-answer="chaveThyropteridae">Thyropteridae</button>
+      <button data-answer="chaveEmballonuridae">Emballonuridae</button>
+      <button data-answer="chaveNoctilionidae">Noctilionidae</button>
+      <button data-answer="chaveMormoopidae">Mormoopidae</button>
+      <button data-answer="chaveFuripteridae">Furipteridae</button>
+      <button data-answer="chaveNatalidae">Natalidae</button>
+      <button data-answer="chaveMolossidae">Molossidae</button>
+      <button data-answer="chaveVespertilionidae">Vespertilionidae</button><button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <!-- Chave para a generos -->
+  
+  <div class="question" id="chaveEmballonuridae">
+    <h2>Chave para a família Emballonuridae</h2>
+    <div class="options">
+      <button data-answer="eq2"> Polegar coberto pelo propatágio; orelhas curtas e arredondadas; porção distal da cauda mal se projetando do uropatágio; no crânio, face com uma depressão em forma de taça </button>
+      <button data-answer="eq6"> Polegar livre do propatágio; orelhas pontiagudas e alongadas; porção distal da cauda projetando-se claramente para o meio do uropatágio; crânio, face normal,sem depressões </button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="eq2">
+    <h2>Observe o uropatágio, a cor e o cranio</h2>
+    <div class="options">
+      <button data-answer="Cyttaropsalecto">Uropatágio sem sacos glandulares; tons escuros, cinza a preto; processos pós-orbitais estreitos, não fundidos às cristas supraorbitais.</button>
+      <button data-answer="eq3">Uropatágio com sacos glandulares; tons claros, castanhos, brancos ou acinzentados; processos pós-orbitais largos fundidos às cristas supraorbitais.</button>
+      <button data-answer="chaveEmballonuridae">Reiniciar na familia</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="eq3">
+    <h2>O que melhor descreve o que você vê?</h2>
+    <div class="options">
+      <button data-answer="Diclidurusisabella">Coloração castanho-clara; garra do polegar evidente; borda posterior do palato profundamente recortada, uniformemente arredondada e atingindo o nível da margem posterior do M3.</button>
+      <button data-answer="eq4">Branco ou cinza claro; garra do polegar pequena ou ausente; borda palatina pouco emarginada e com projeção anterior, não atingindo a altura do M3.</button>
+      <button data-answer="chaveEmballonuridae">Reiniciar na familia</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="eq4">
+    <h2>Observe o tamanho do morcego</h2>
+    <div class="options">
+      <button data-answer="Diclidurusscutatus">Antebraço com menos de 60 mm; a projeção anterior do palato se funde com os forames palatinos.</button>
+      <button data-answer="eq5">Antebraço com espessura igual ou superior a 60 mm; ausência de forames palatinos.</button>
+      <button data-answer="chaveEmballonuridae">Reiniciar na familia</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="eq5">
+    <h2>Qual espécie é essa?</h2>
+    <div class="options">
+      <button data-answer="Diclidurusalbus">Antebraço 60-69 mm; incisivos superiores unicúspides; pelagem branca.</button>
+      <button data-answer="Diclidurusingens">Antebraço 70-73 mm; incisivos superiores bífidos; pelagem cinza-clara</button>
+      <button data-answer="chaveEmballonuridae">Reiniciar na familia</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="eq6">
+    <h2>Observe o propatágio</h2>
+    <div class="options">
+       <button data-answer="eq7">propatágio sem saco glandular, calcanhar maior que a tibia</button>
+        <button data-answer="eq9">Propatágio com saco glandular, calcanhar pequeno, menor que a tibia.</button>
+        <button data-answer="chaveEmballonuridae">Reiniciar na familia</button>
+        <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="eq7">
+    <h2>Observe o rinário (área entre o nariz e a mandíbula)</h2>
+    <div class="options">
+      <button data-answer="Rhynchonycterisnaso">Rinário muito alongado e projetado; pelagem longa e ondulada; dorso com duas linhas longitudinais difusas e claras; antebraços com tufos de pelos claros; crista sagital ausente; fossetas basiesfenoidais rasas.</button>
+      <button data-answer="eq8">Rinário não projetado; pelagem muito longa e lanosa; dorso de coloração uniforme, sem linhas; antebraços sem tufos de pelo; crista sagital presente; fossetas basiesfenoidais profundas.</button>
+      <button data-answer="chaveEmballonuridae">Reiniciar na familia</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="eq8">
+    <h2>Genero Centronycteris</h2>
+    <div class="options">
+      <button data-answer="Centronycteriscentralis">Coloração dorsal marrom-avermelhada escura; fossetas basiesfenoides curtas que não se estendem entre os processos pterigoides; borda posterolateral do palato com uma reentrância proeminente; fossetas basiesfenoides profundas.</button>
+      <button data-answer="Centronycterismaximiliani">Coloração dorsal marrom-avermelhada ou marrom-acinzentada opaca; fossas basiesfenoidais longas que se estendem anteriormente entre os processos pterigóides; borda posterolateral do palato suavemente curvada.</button>
+      <button data-answer="chaveEmballonuridae">Reiniciar na familia</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="eq9">
+    <h2>Observe saco alar no propatágio </h2>
+    <div class="options">
+      <button data-answer="Cormurabrevirostris">Saco alar longo e estreito localizado no meio do propatágio;dorso castanho-avermelhado; primeiro pré-molar pequeno, mas com cúspides anterior e posterior evidentes.</button>
+      <button data-answer="eq10">Pequeno saco alar, localizado na borda anterior do propatágio, ou grande e próximo ao antebraço; dorso enegrecido ou acastanhado; primeiro pré-molar minúsculo e espinhoso.</button>
+      <button data-answer="chaveEmballonuridae">Reiniciar na familia</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="question" id="eq10">
+    <h2>Ainda sobre o saco alar</h2>
+    <div class="options">
+      <button data-answer="eq11">Saco alar localizado no centro do propatágio, sem atingir a margem anterior; no crânio, a parte anterior da face está inflada com um inchaço que se estende lateralmente sobre as raízes dos caninos.</button>
+      <button data-answer="eq13">Saco alar não localizado no centro do propatágio; no crânio, parte anterior da face, não inchado.</button>
+      <button data-answer="chaveEmballonuridae">Reiniciar na familia</button>
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  
+  
+  <!-- Resultado da chave para Emballonuridae -->
+
+  <div class="result" id="Cyttaropsalecto">
+    <h2>Resultado: Cyttarops alecto</h2>
+    <p>A principal característica que distingue o Cyttarops alecto (conhecido como morcego-de-orelha-curta ou morcego-fumaça) de outros morcegos da família Emballonuridae é a ausência de sacos alares (bolsas glandulares nas asas), combinada com uma morfologia muito específica.</p>
+    <p ><strong>Pontos principais:</strong></p>
+    <p><strong>Ausência de Saco Alar:</strong> Ao contrário da maioria dos embalonurídeos (como os gêneros Saccopteryx ou Peropteryx), o Cyttarops alecto não possui os sacos nas membranas das asas.</p>
+    <p><strong>Orelhas Curtas e Arredondadas:</strong> Eles possuem orelhas pequenas, largas e arredondadas que mal se elevam acima da coroa da cabeça, diferentemente de muitos outros morcegos.</p>
+    <p><strong>Pelagem Silky (Sedosa):</strong> Apresentam uma pelagem densa, longa e sedosa, de cor cinza-esfumaçado ou escura.</p>
+    <p><strong>Clavícula Expandida:</strong> Possuem as clavículas (ossos do ombro) alargadas, uma característica interna única.</p>
+    <p><strong>Embora pertença à família Emballonuridae,</strong> essa combinação de "orelha curta + sem saco alar + cor cinza" o torna facilmente distinguível.</p>
+    <div class="options">
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="result" id="Diclidurusisabella">
+    <h2>Resultado: Diclidurus isabella</h2>
+    <p>Enquanto as outras três espécies de Diclidurus (D. albus, D. ingens e D. scutatus) possuem pelagem predominantemente branca ou cinza-esbranquiçada, o D. isabella apresenta tons amarronzados, especialmente no dorso, com a cabeça e os ombros tendendo a um tom mais esbranquiçado. </p>
+    <p><strong>Outras características distintivas:</strong></p>
+    <p><strong>Coloração:</strong> Pelagem clara, geralmente de cor castanho-clara ou acinzentada.</p>
+    <p><strong>Garra do Polegar:</strong> Garra do polegar evidente e bem desenvolvida.</p>
+    <p><strong>Borda Palatina:</strong> Bordas posteriores do palato profundamente recortadas, uniformemente arredondadas e atingindo o nível da margem posterior do M3 (molar 3).</p>
+    <div class="options">
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="result" id="Diclidurusscutatus">
+    <h2>Resultado: Diclidurus scutatus</h2>
+    <p>A principal característica que distingue o Diclidurus scutatus (morcego-fantasma-menor) das outras espécies de morcegos, particularmente dentro do seu gênero, é a sua pelagem branca ou esbranquiçada longa e sedosa, combinada com um tamanho de antebraço menor em relação ao seu parente próximo, o Diclidurus albus. </p>
+    <p><strong>Pontos principais de distinção:</strong></p>
+    <p><strong>Pelagem Branca:</strong>  É um dos raros morcegos no mundo com pelagem totalmente branca ou com um tom cinza claro, o que o torna visualmente distinto.</p>
+    <p><strong>Tamanho do Antebraço:</strong> o antebraço com tamanho entre 51 e 58,9 mm, que é menor do que o do Diclidurus albus</p>
+    <p><strong>Glándulas no Uropatágio:</strong> Os machos adultos possuem duas bolsas glandulares no uropatágio (membrana entre as patas traseiras), que se tornam mais pronunciadas durante a época de reprodução.</p>
+    <div class="options">
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="result" id="Diclidurusalbus">
+    <h2>Resultado: Diclidurus albus</h2>
+    <p>A principal característica que distingue o Diclidurus albus (morcego-fantasma-maior) das outras espécies de morcegos, especialmente dentro do seu gênero, é a combinação de sua pelagem branca ou cinza-clara, o tamanho relativamente grande e a presença de incisivos superiores unicúspides. </p>
+    <p><strong>Pontos principais de distinção:</strong></p>
+    <p><strong>Pelagem Branca ou Cinza-Clara:</strong> O Diclidurus albus possui uma pelagem predominantemente branca ou cinza-clara, o que o torna visualmente distinto de muitos outros morcegos.</p>
+    <p><strong>Tamanho do Antebraço:</strong> O antebraço do Diclidurus albus geralmente varia entre 60 e 69 mm, sendo maior do que o do Diclidurus scutatus.</p>
+    <p><strong>Incisivos Superiores Unicúspides:</strong> Os incisivos superiores do Diclidurus albus são unicúspides (com uma única cúspide), enquanto os do Diclidurus ingens são bífidos (com duas cúspides).</p>
+    <div class="options">
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="result" id="Diclidurusingens">
+    <h2>Resultado: Diclidurus ingens</h2>
+    <p>O Diclidurus ingens (morcego-fantasma-maior) é distinto por sua pelagem cinza-clara com marcas escuras, antebraço maior (70-73 mm) e incisivos superiores bífidos. </p>
+    <p><strong>Pontos principais de distinção:</strong></p>
+    <p><strong>Pelagem Cinza-Clara com Marcas Escuras:</strong> A pelagem do Diclidurus ingens é cinza-clara com marcas escuras, diferentemente do Diclidurus albus que tem pelagem totalmente branca.</p>
+    <p><strong>Tamanho do Antebraço:</strong> O antebraço do Diclidurus ingens varia entre 70 e 73 mm, sendo maior do que o do Diclidurus scutatus.</p>
+    <p><strong>Incisivos Superiores Bífidos:</strong> Os incisivos superiores do Diclidurus ingens são bífidos (com duas cúspides), enquanto os do Diclidurus albus são unicúspides.</p>
+    <div class="options">
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="result" id="Rhynchonycterisnaso">
+    <h2>Resultado: Rhynchonycteris naso</h2>
+    <p>A principal característica que distingue o Rhynchonycteris naso (conhecido como morcego-narigudo) das outras espécies de morcegos é a presença de tufos de pelos brancos/cinzentos regularmente espaçados ao longo de seus antebraços. </p>
+    <p> Além desses tufos no antebraço, outras características marcantes que ajudam na sua identificação são:</p>
+    <p><strong>Focinho Longo:</strong> Possui um nariz alongado e pontudo (daí o nome naso), que se projeta como uma probóscide.</p>
+    <p><strong>Listras Dorsais:</strong> Apresenta duas listras brancas sutis no dorso (costas), que formam um padrão de camuflagem.</p>
+    <p><strong>Hábito de Pouso:</strong> Diferente de muitos morcegos, costuma pousar em superfícies verticais expostas (como troncos de árvores próximos à água), muitas vezes alinhados em uma fila, e não escondidos em ocos.</p>
+    <div class="options">
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="result" id="Centronycteriscentralis">
+    <h2>Resultado: Centronycteris centralis</h2>
+    <p>A principal característica que distingue o Centronycteris centralis (conhecido como morcego-greñudo-de-saco ou Thomas's shaggy bat) de outras espécies de morcegos, especialmente dentro da sua família (Emballonuridae), é uma combinação de sua morfologia craniodentária e pelagem longa e desgrenhada.</p>
+    <p>Especificamente, em comparação com o seu parente próximo, Centronycteris maximiliani:</p>
+    <p><strong>Diferenciação Cranial:</strong> O C. centralis apresenta um inchaço rostral distinto na base do processo pós-orbital do crânio.</p>
+    <p><strong>Dentição:</strong> Possui características dentárias específicas, como o tamanho e formato do primeiro pré-molar superior, que diferem de C. maximiliani.</p>
+     <p><strong>Pelagem e cauda:</strong> Possui um pelo longo, denso e "desgrenhado" (shaggy) que se estende sobre a membrana da cauda (uropatágio), sendo uma das espécies mais raras e pequenas da região neotropical.</p>
+     <p><strong>Ausência de Saco Alar:</strong> Ao contrário de muitos outros Emballonuridae, o gênero Centronycteris não possui sacos glandulares nas asas. </p>
+    <div class="options">
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="result" id="Centronycterismaximiliani">
+    <h2>Resultado: Centronycteris maximiliani</h2>
+    <p>A principal característica que distingue o Centronycteris maximiliani (conhecido como morcego-greñudo-de-saco ou Max's shaggy bat) de outras espécies de morcegos, especialmente dentro da sua família (Emballonuridae), é a combinação de sua morfologia craniodentária e pelagem longa e desgrenhada, mas com diferenças específicas em relação ao seu parente próximo, Centronycteris centralis.</p>
+    <p>Especificamente, em comparação com C. centralis:</p>
+    <p><strong>Diferenciação Cranial:</strong> O C. maximiliani não apresenta o inchaço rostral distinto na base do processo pós-orbital do crânio que é observado em C. centralis.</p>
+    <p><strong>Dentição:</strong> Possui características dentárias específicas, como o tamanho e formato do primeiro pré-molar superior, que diferem de C. centralis.</p>
+     <p><strong>Pelagem e cauda:</strong> Possui um pelo longo, denso e "desgrenhado" (shaggy) que se estende sobre a membrana da cauda (uropatágio), sendo uma das espécies mais raras e pequenas da região neotropical.</p>
+     <p><strong>Ausência de Saco Alar:</strong> Assim como C. centralis, o gênero Centronycteris não possui sacos glandulares nas asas, o que os diferencia de muitos outros Emballonuridae.</p>
+    <div class="options">
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  <div class="result" id="Cormurabrevirostris">
+    <h2>Resultado: Cormura brevirostris</h2>
+    <p>A principal característica que distingue o Cormura brevirostris (conhecido como morcego-de-saco-curto) de outras espécies de morcegos, especialmente dentro da sua família (Emballonuridae), é a presença de um saco alar longo e estreito localizado no meio do propatágio, combinado com uma coloração dorsal castanho-avermelhada e um primeiro pré-molar pequeno, mas com cúspides anterior e posterior evidentes.</p>
+    <p><strong>Pontos principais de distinção:</strong></p>
+    <p><strong>Saco Alar Longo e Estreito:</strong> O Cormura brevirostris possui um saco alar (bolsa glandular) que é particularmente longo e estreito, localizado no meio do propatágio (membrana entre o corpo e a asa), o que é uma característica distintiva dentro da família Emballonuridae.</p>
+    <p><strong>Coloração Dorsal:</strong> Apresenta uma coloração dorsal castanho-avermelhada, que pode ajudar a diferenciá-lo visualmente de outras espécies de morcegos que possuem pelagem mais clara ou cinza.</p>
+    <p><strong>Primeiro Pré-Molar Pequeno:</strong> O primeiro pré-molar superior do Cormura brevirostris é pequeno, mas possui cúspides anterior e posterior evidentes, o que pode ser usado como uma característica dentária para identificação em comparação com outras espécies que podem ter pré-molares reduzidos ou ausentes.</p>
+    <div class="options">
+      <button data-answer="reset">Reiniciar</button>
+    </div>
+  </div>
+
+  
+
+
+
+
+
+
+</section>
+
+
+
+</body>
+<!-- ================= RODAPÉ ================= -->
+<footer>
+    <small>
+     Identificação de morcegos neotropicais. Desenvolvido por Ítalo Silva Azevedo 2026. Baseado em CLAVE DE IDENTIFICACIÓN DE LOS MURCIÉLAGOS NEOTROPICALES”, organizado por Programa de Conservación de los Murciélagos de Argentina (2021).
+    </small>
+    <div>
+      <small>
+      Contato: Italosilvaazevedo@gmail.com
+    </small> 
+    </div>
+       
+
+</footer>
+
+<!-- Importação do JS -->
+<script src="script.js"></script>
+</html>
