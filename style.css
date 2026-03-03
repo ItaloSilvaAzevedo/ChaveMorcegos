@@ -95,7 +95,6 @@ header h1 {
 }
 
 /* Botões redondos do header (tema e voltar) */
-#menuBtn,
 #backBtn {
   flex-shrink: 0;
   width: 40px;
