@@ -1,53 +1,106 @@
-const btn = document.getElementById('menuBtn');
-const body = document.body; 
-const startBtn = document.getElementById("startBtn");
-const chavefamilia = document.getElementById("chave-familia");
+// ============================================
+// CHAVE DICOTÔMICA - SCRIPT PRINCIPAL
+// ============================================
 
-btn.addEventListener('click', () => {
-    body.classList.toggle('light');
-    body.classList.toggle('dark'); 
-    
-    if (body.classList.contains('dark')) { btn.textContent = "☀️"; }// Sol no tema escuro }
-    else { btn.textContent = "🌙";
-     } // Lua no tema claro
-     // 
-    })   
+const menuBtn = document.getElementById('menuBtn');
+const backBtn = document.getElementById('backBtn');
+const startBtn = document.getElementById('startBtn');
+const body = document.body;
 
-startBtn.addEventListener("click", () => { 
-    // Remove a seção de boas-vindas do body ou de um container) 
-    document.getElementById("boasvindas").style.display = "none";
-    q1.style.display = "block";
-     
-})
+// Histórico de navegação para suportar o botão "Voltar"
+const navHistory = [];
 
-// Seleciona todos os botões dentro de .options
+// ============================================
+// TEMA CLARO / ESCURO
+// ============================================
+
+menuBtn.addEventListener('click', () => {
+  body.classList.toggle('dark');
+  menuBtn.textContent = body.classList.contains('dark') ? '☀️' : '🌙';
+});
+
+// ============================================
+// UTILITÁRIOS DE NAVEGAÇÃO
+// ============================================
+
+/** Oculta todas as perguntas, resultados e boas-vindas */
+function hideAll() {
+  document.querySelectorAll('.question, .result, .resultfamilia').forEach(el => {
+    el.style.display = 'none';
+  });
+  document.getElementById('boasvindas').style.display = 'none';
+}
+
+/** Retorna o id do elemento atualmente visível */
+function getCurrentId() {
+  const bv = document.getElementById('boasvindas');
+  if (bv && bv.style.display === 'block') return 'boasvindas';
+
+  for (const el of document.querySelectorAll('.question, .result, .resultfamilia')) {
+    if (el.style.display === 'block') return el.id;
+  }
+  return null;
+}
+
+/** Exibe a seção com o id fornecido e atualiza o botão Voltar */
+function showSection(id) {
+  hideAll();
+  if (id === 'boasvindas') {
+    document.getElementById('boasvindas').style.display = 'block';
+  } else {
+    const el = document.getElementById(id);
+    if (el) el.style.display = 'block';
+  }
+  updateBackBtn();
+}
+
+/** Mostra ou oculta o botão Voltar conforme o histórico */
+function updateBackBtn() {
+  backBtn.style.display = navHistory.length > 0 ? 'flex' : 'none';
+}
+
+// ============================================
+// BOTÃO INICIAR
+// ============================================
+
+startBtn.addEventListener('click', () => {
+  navHistory.push('boasvindas');
+  showSection('q1');
+});
+
+// ============================================
+// BOTÃO VOLTAR
+// ============================================
+
+backBtn.addEventListener('click', () => {
+  if (navHistory.length > 0) {
+    const prev = navHistory.pop();
+    showSection(prev);
+  }
+});
+
+// ============================================
+// NAVEGAÇÃO POR BOTÕES DE OPÇÃO
+// ============================================
+
 document.querySelectorAll('.options button').forEach(button => {
   button.addEventListener('click', () => {
-    // pega o valor do atributo data-answer
     const destino = button.dataset.answer;
 
-    // esconde todas as perguntas
+    if (destino === 'reset') {
+      // Limpa o histórico e volta ao início
+      navHistory.length = 0;
+      showSection('q1');
+      return;
+    }
 
-    document.querySelectorAll('.question').forEach(q => q.style.display = 'none');
-    document.querySelectorAll('.resultfamilia').forEach(q => q.style.display = 'none');
-    document.getElementById("boasvindas").style.display = "none";
+    // Salva a tela atual no histórico antes de navegar
+    const current = getCurrentId();
+    if (current) navHistory.push(current);
 
-    // se o destino for "reset", volta para a primeira pergunta
-    if (destino === "reset") {
-      document.querySelectorAll('.question').forEach(q => q.style.display = 'none');
-      document.getElementById("q1").style.display = "block";
-      document.querySelectorAll('.resultfamilia').forEach(q => q.style.display = 'none');
-      document.querySelectorAll('.result').forEach(q => q.style.display = 'none');
-      
-
-      
-    } else {
-      // mostra a seção correspondente ao id
-      const alvo = document.getElementById(destino);
-      if (alvo) {
-        alvo.style.display = "block";
-      }
+    const alvo = document.getElementById(destino);
+    if (alvo) {
+      showSection(destino);
     }
   });
 });
-
